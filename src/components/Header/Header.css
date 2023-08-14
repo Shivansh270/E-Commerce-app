@@ -1,1 +1,139 @@
 @import "../../css-config/mixins.css";
+
+
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 99;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .main-header {
+        padding: 0 40px;
+    }
+}
+
+.main-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .main-header .header-content {
+        height: 80px;
+    }
+}
+
+.main-header .left {
+    list-style-type: none;
+    display: none;
+    gap: 25px;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .main-header .left {
+        display: flex;
+    }
+}
+
+.main-header .left li {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main-header .left li:hover {
+    opacity: 0.6;
+}
+
+.main-header .center {
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .main-header .center {
+        font-size: 34px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.main-header .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .main-header .right {
+        gap: 25px;
+    }
+}
+
+.main-header .right svg {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .main-header .right svg {
+        font-size: 24px;
+    }
+}
+
+.main-header .right svg:hover {
+    opacity: 0.6;
+}
+
+.main-header .right .cart-icon {
+    position: relative;
+}
+
+.main-header .right .cart-icon span {
+    min-width: 20px;
+    text-align: center;
+    background: #8e2de2;
+    padding: 2.5px;
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 10px;
+}
+
+.main-header.sticky-header {
+    background-color: #212121;
+    color: white;
+    position: sticky;
+    top: 0;
+    transform: translateY(-60px);
+    animation: StickyHeader 0.3s ease forwards;
+}
+
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
