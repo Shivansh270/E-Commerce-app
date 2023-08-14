@@ -1,1 +1,97 @@
 @import "../../css-config/mixins.css";
+
+.footer {
+    width: 100%;
+}
+
+.footer .footer-content {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .footer .footer-content {
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+}
+
+.footer .footer-content .col {
+    max-width: 300px;
+}
+
+.footer .footer-content .col:nth-child(3) {
+    width: 150px;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .footer .footer-content .col:nth-child(3) {
+        width: auto;
+    }
+}
+
+.footer .footer-content .col .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footer .footer-content .col .text {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.footer .footer-content .col .c-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer .footer-content .col .c-item svg {
+    flex-shrink: 0;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 4px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer .footer-content .col span.text {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer .bottom-bar {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .bottom-bar .bottom-bar-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Media Query for Medium Screen */
+@media only screen and (min-width: 768px) {
+    .footer .bottom-bar .bottom-bar-content {
+        padding: 0;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.footer .bottom-bar .bottom-bar-content .text {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
