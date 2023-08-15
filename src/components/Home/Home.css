@@ -1,1 +1,10 @@
-@import "../../css-config/mixins.css";
+.main-content .layout {
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-content .layout {
+        max-width: 1200px;
+    }
+}

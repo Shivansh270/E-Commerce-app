@@ -1,6 +1,6 @@
 import Banner from "./Banner/Banner";
 import "./Home.css";
-import Category from "../Category/Category";
+import Category from "./Category/Category";
 
 const Home = () => {
     return (
@@ -8,7 +8,7 @@ const Home = () => {
           <Banner/>
           <div className="main-content">
             <div className="layout">
-              <Category />
+              < Category/>
               {/* <Products
                 headingText="Popular Products"
                 products={products}

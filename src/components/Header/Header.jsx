@@ -7,10 +7,12 @@ import "./Header.css";
 import Search from "./Search/Search";
 import cart from "../Cart/Cart"
 import {StateContextProvider} from "../../context/StateContextProvider"
+import Cart from "../Cart/Cart";
 
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -24,7 +26,9 @@ const Header = () => {
     useEffect(() => {
       window.addEventListener("scroll", handleScroll);
   }, []);
+
   return (
+    <>
     <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
       <div className="header-content">
         <ul className="left">
@@ -38,13 +42,16 @@ const Header = () => {
                     <div className="right">
                         <TbSearch />
                         <AiOutlineHeart />
-                        <span className="cart-icon">
-                            <CgShoppingCart />
+                        <span className="cart-icon"
+                        onClick={() => setShowCart(true)}>
+                            <CgShoppingCart/>
                             <span>3</span>
                         </span>
                     </div>
                 </div>
             </header>
+        {showCart && <Cart setShowCart={setShowCart} />}
+        </>
   )
 }
 
