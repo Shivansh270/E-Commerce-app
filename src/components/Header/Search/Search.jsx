@@ -1,4 +1,5 @@
 import "./Search.css";
+
 const Search = () => {
     return <div>Search</div>;
 };

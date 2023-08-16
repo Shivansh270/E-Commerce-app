@@ -5,54 +5,51 @@ import { CgShoppingCart } from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
 import "./Header.css";
 import Search from "./Search/Search";
-import cart from "../Cart/Cart"
-import {StateContextProvider} from "../../context/StateContextProvider"
+import { StateContextProvider } from "../../utils/StateContextProvider";
 import Cart from "../Cart/Cart";
-
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [showSearch, setShowSeacrch] = useState(false);
 
-    const handleScroll = () => {
-        const offset = window.scrollY;
-        if (offset > 200) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    };
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
 
-    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-    <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
-      <div className="header-content">
-        <ul className="left">
-                        <li>Home</li>
-                        <li >About</li>
-                        <li>Categories</li>
-                    </ul>
-                    <div className="center">
-                        YOUR STORE.
-                    </div>
-                    <div className="right">
-                        <TbSearch />
-                        <AiOutlineHeart />
-                        <span className="cart-icon"
-                        onClick={() => setShowCart(true)}>
-                            <CgShoppingCart/>
-                            <span>3</span>
-                        </span>
-                    </div>
-                </div>
-            </header>
-        {showCart && <Cart setShowCart={setShowCart} />}
-        </>
-  )
-}
+      <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
+        <div className="header-content">
+          <ul className="left">
+            <li>Home</li>
+            <li>About</li>
+            <li>Categories</li>
+          </ul>
+          <div className="center">YOUR STORE.</div>
+          <div className="right">
+            <TbSearch onClick={() => setShowSeacrch(true)} />
+            <AiOutlineHeart />
+            <span className="cart-icon" onClick={() => setShowCart(true)}>
+              <CgShoppingCart />
+              <span>3</span>
+            </span>
+          </div>
+        </div>
+      </header>
+      {showCart && <Cart setShowCart={setShowCart} />}
+      {showSearch && <Search setShowSeacrch={setShowSeacrch} />}
+    </>
+  );
+};
 
-export default Header
+export default Header;
