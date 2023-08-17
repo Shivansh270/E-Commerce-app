@@ -1,22 +1,22 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from "react";
 
-export const StateContext = createContext()
+export const StateContext = createContext();
 
-export const StateContextProvider = ({children}) => {
-    // const [results, setResults] = useState([]);
-    // const [loading, setLoading] = useState(false);
-    // const [searchTerm, setSearchTerm] = useState('')
+export const StateContextProvider = ({ children }) => {
+  const [categories, setCategories] = useState();
+  const [products, setProducts] = useState();
+  // const [searchTerm, setSearchTerm] = useState('')
 
-    const getResults = async () => {
-      
-      }
+  const getResults = async () => {};
 
-    const value = {
-       
-    };
+  const value = {
+    categories,
+    setCategories,
+    products,
+    setProducts,
+  };
 
-    return <StateContext.Provider value={value}>
-          {children}
-           </StateContext.Provider>
-
+  return (
+    <StateContext.Provider value={value}>{children}</StateContext.Provider>
+  );
 };
