@@ -1,5 +1,4 @@
 @import "../../css-config/mixins.css";
-
 .cart-panel {
   position: fixed;
   top: 0;
@@ -32,7 +31,6 @@
   animation: slideCartWindow 0.3s ease forwards;
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .cart-panel .cart-content {
     width: 340px;
@@ -71,6 +69,10 @@
   font-size: 14px;
 }
 
+.cart-panel .cart-content .cart-header .close-btn:hover {
+  opacity: 0.5;
+}
+
 .cart-panel .cart-content .empty-cart {
   display: flex;
   flex-direction: column;
@@ -97,6 +99,10 @@
   color: white;
   background: #8e2de2;
   border-bottom: 3px solid #6516aa;
+}
+
+.cart-panel .cart-content .empty-cart .return-cta svg {
+  margin-right: 10px;
 }
 
 .cart-panel .cart-content .cart-footer {
@@ -139,6 +145,10 @@
   background: #8e2de2;
   border-bottom: 3px solid #6516aa;
   text-transform: uppercase;
+}
+
+.cart-panel .cart-content .cart-footer .button .checkout-cta svg {
+  margin-right: 10px;
 }
 
 @keyframes slideCartWindow {

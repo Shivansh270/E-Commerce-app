@@ -5,13 +5,16 @@ import { CgShoppingCart } from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
 import "./Header.css";
 import Search from "./Search/Search";
-import { StateContextProvider } from "../../utils/StateContextProvider";
+import {
+  StateContext,
+  StateContextProvider,
+} from "../../utils/StateContextProvider";
 import Cart from "../Cart/Cart";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [showCart, setShowCart] = useState(false);
   const [showSearch, setShowSeacrch] = useState(false);
+  const { cartCount, showCart, setShowCart } = useContext(StateContext);
 
   const navigate = useNavigate();
 
@@ -45,7 +48,7 @@ const Header = () => {
             <AiOutlineHeart />
             <span className="cart-icon" onClick={() => setShowCart(true)}>
               <CgShoppingCart />
-              <span>3</span>
+              <span>{!!cartCount && <span>{cartCount}</span>}</span>
             </span>
           </div>
         </div>

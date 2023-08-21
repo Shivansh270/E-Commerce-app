@@ -20,7 +20,9 @@ const SingleProduct = () => {
   const [quantity, setQuantity] = useState(1);
   const { handleAddToCart } = useContext(StateContext);
 
-  if (!data) return;
+  if (!data) {
+    return;
+  }
 
   const product = data?.data?.[0]?.attributes;
 
