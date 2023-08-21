@@ -1,16 +1,15 @@
-/* Media Mixins */
 @media only screen and (min-width: 640px) {
-    /* Content for small screens */
+  /* Content for small screens */
 }
 @media only screen and (min-width: 768px) {
-    /* Content for medium screens */
+  /* Content for medium screens */
 }
 @media only screen and (min-width: 1024px) {
-    /* Content for large screens */
+  /* Content for large screens */
 }
 @media only screen and (min-width: 1280px) {
-    /* Content for extra-large screens */
+  /* Content for extra-large screens */
 }
 @media only screen and (min-width: 1536px) {
-    /* Content for extra-extra-large screens */
+  /* Content for extra-extra-large screens */
 }
