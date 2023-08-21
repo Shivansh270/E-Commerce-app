@@ -10,7 +10,6 @@
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .main-header {
     padding: 0 40px;
@@ -26,7 +25,6 @@
   margin: 0 auto;
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .main-header .header-content {
     height: 80px;
@@ -39,7 +37,6 @@
   gap: 25px;
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .main-header .left {
     display: flex;
@@ -63,7 +60,6 @@
   cursor: pointer;
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .main-header .center {
     font-size: 34px;
@@ -79,7 +75,6 @@
   gap: 20px;
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .main-header .right {
     gap: 25px;
@@ -91,7 +86,6 @@
   cursor: pointer;
 }
 
-/* Media Query for Medium Screen */
 @media only screen and (min-width: 768px) {
   .main-header .right svg {
     font-size: 24px;
