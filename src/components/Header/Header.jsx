@@ -13,7 +13,8 @@ import Cart from "../Cart/Cart";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [showSearch, setShowSeacrch] = useState(false);
+  const [searchModal, setSearchModal] = useState(false);
+
   const { cartCount, showCart, setShowCart } = useContext(StateContext);
 
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ const Header = () => {
             YOUR STORE.
           </div>
           <div className="right">
-            <TbSearch onClick={() => setShowSeacrch(true)} />
+            <TbSearch onClick={() => setSearchModal(true)} />
             <AiOutlineHeart />
             <span className="cart-icon" onClick={() => setShowCart(true)}>
               <CgShoppingCart />
@@ -53,8 +54,8 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {showCart && <Cart setShowCart={setShowCart} />}
-      {showSearch && <Search setShowSeacrch={setShowSeacrch} />}
+      {searchModal && <Search setSearchModal={setSearchModal} />}
+      {showCart && <Cart />}
     </>
   );
 };
